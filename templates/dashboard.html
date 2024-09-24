@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cial Dashboard</title>
+    <link rel="stylesheet" href="../static/dashboadpage/dashboad.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>cial</h1>
+            <div class="user-info">
+                <span>Welcome, Admin</span>
+                <img src="../static/dashboadpage/img/profile_logo.png" alt="User Profile Picture">
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="#">Transfers</a></li>
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="{% url 'index' %}">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <section class="content">
+                <h2>Account Overview</h2>
+                <div class="account-balance">
+                    <p>Available Balance</p>
+                    <h3>₹12,345.67</h3>
+                </div>
+
+                <h2>Recent Transactions</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>09/21/2024</td>
+                            <td>Payment to ABC Utilities</td>
+                            <td>-₹100.00</td>
+                        </tr>
+                        <tr>
+                            <td>09/19/2024</td>
+                            <td>Transfer from Savings</td>
+                            <td>+₹500.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cial. All rights reserved.create by Gokul</p>
+    </footer>
+
+</body>
+</html>
